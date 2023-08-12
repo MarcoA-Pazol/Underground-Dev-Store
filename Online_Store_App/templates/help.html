@@ -1,0 +1,61 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/help.css' %}">
+    <script src="{% static 'scripts/help.js' %}"></script>    
+    
+    <!--Frecuent Questions-->
+    <div id="body">
+        <section id="frequent_questions_body">
+            <h1 id="frequent_questions_title">FREQUENT QUESTIONS</h1>
+
+            {% for question in questions %}
+                <div class="accordion">
+                    <div class="question">
+                        {{question.question}}
+                    </div>
+                    <div class="answer">
+                        {{question.answer}}
+                    </div>
+                </div>
+            {% endfor %}
+
+            <div class="accordion">
+                <div class="question">
+                    For more info
+                </div>
+                <div class="answer">
+                    If you have another questions, please contact with us by WhatsApp: 7121921470
+                </div>
+            </div>
+        </section>  
+        
+        <aside class="aside">
+            <h1>DELIVERY</h1>  
+            <ul>
+                <li>Is shipping secure?</li>
+                <li>How long does it take for my product to arrive?</li>
+                <li>What is the shipping cost??</li>
+                <li>By which delivery service is the shipment made?</li>
+            </ul>    
+
+            <h1>WARRANTY</h1>  
+            <ul>
+                <li>Can I request a refund?</li>
+                <li>What do I need for my warranty to be valid?</li>
+                <li>How many days of warranty do I have?</li>
+                <li>What to do if the manufacturer does not want to validate the warranty?</li>
+            </ul>
+            
+            <h1>PAY</h1>
+            <ul>
+                <li>I paid but I did not receive an E-mail ticket.</li>
+                <li>Where can I pay my products?</li>
+                <li>Which are the pay methods?</li>
+            </ul>
+        </aside>
+
+    </div>
+    
+{% endblock %}

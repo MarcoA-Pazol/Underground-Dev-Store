@@ -1,0 +1,178 @@
+/*BODY*/
+.body_container{
+    background-color: #0a090f;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1300px;
+}
+
+.block_content_container{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    height: 450px;
+    width: 1300px;
+    flex: 1;
+}
+
+/*NAV-BAR*/
+.main_navigation_bar{
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    background: linear-gradient(rgb(1, 1, 14), rgb(0, 0, 2));
+    padding-inline: 10px;
+    position: fixed;
+    bottom: 560px;
+    width: 1300px;
+    text-align: center;
+}
+
+.main_navigation_bar ul li{
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    display: inline;
+    list-style: none;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.main_navigation_bar ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.main_navigation_bar ul li a:hover{
+    color: aqua;
+    text-decoration: none;
+}
+
+#login_icon{
+    width: 22px;
+    height: 22px;
+}
+
+#shoping_car_icon{
+    width: 25px;
+    height: 25px;
+}
+
+/*Sesion_acordion*/
+.sesion_acordion{
+    position: fixed;
+    top: 40px;
+    left: 913px;
+    width: 120px;
+    height: 60px;
+    background: linear-gradient(rgb(1, 1, 14), rgb(0, 0, 2)); 
+    border-inline: 2px solid rgb(186, 191, 240);
+    border-bottom: 2px solid rgb(186, 191, 240);
+    display: block;
+}
+
+.sesion_acordion a span{
+    display: block;
+}
+
+#login_sesion{
+    position: fixed;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(186, 191, 240);
+    text-align: left;
+    padding-left: 5px;
+}
+
+#login_sesion:hover{
+    color: blue;
+}
+
+#register_account{
+    position: fixed;
+    top: 60px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(186, 191, 240);
+    text-align: left;
+    padding-left: 5px;
+}
+#register_account:hover{
+    color: green;
+}
+
+#close_sesion{
+    position: fixed;
+    top: 80px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(186, 191, 240);
+    text-align: left;
+    padding-left: 5px;
+}
+#close_sesion:hover{
+    color: red;
+}
+
+
+/*FOOTER*/
+
+/*Services Container*/
+.services_container{
+    border-bottom: 1px solid rgb(186, 191, 240);
+    height: 130px;
+}
+
+.services_container ul div{
+    margin-inline: 20px;
+    display: inline-flex; 
+    width: 290px;
+    height: 120px;
+    border-right: 1px solid rgb(186, 191, 240);
+    border-left: 1px solid rgb(186, 191, 240);
+    margin-right: 10px;
+}
+
+.services_container ul div p{
+    text-align: left;
+    color: rgb(186, 191, 240);
+    font-size: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.services_container ul div img{
+    width: 55px;
+    height: 20px;
+}
+
+.social_icons{
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.social_icons li{
+    display: inline;
+    padding: 50px;
+}
+
+.social_icons li img{
+    width: 40px;
+    height: 40px;
+}
+
+.footer_container{
+    border-top: solid white 2px;
+    background-color: #07070c;
+    padding-bottom: 2px;
+    width: 1300px;
+}
+
+.footer_container div{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    color: white;
+    display: block;
+    text-align: center;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

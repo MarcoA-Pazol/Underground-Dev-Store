@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/products.css' %}">
+    <script src="{% static 'scripts/products.js' %}"></script>
+    
+    <!--Products by section-->
+    <div class="product_sections">
+
+        {% for product in products %}
+            <article class="section">
+                <img style="width: 270px; height: 190px;" src="{{ product.product_image.url }}" alt="{{ product.product_name }} Image">
+                <div>
+                    <h1>{{product.product_name}}</h1>
+                    <h4>${{product.product_price}} USD</h4>
+                </div>
+                <button> ADD </button>    
+            </article>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

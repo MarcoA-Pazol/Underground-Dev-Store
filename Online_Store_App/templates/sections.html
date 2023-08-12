@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/sections.css' %}">
+    
+    <div class="section">   
+        <h1>S E C T I O N S :</h1>
+
+            <section>
+                {% for section in sections %}
+                    <div>
+                        <a href="{% url 'products' section.id %}"><h2>{{section.product_section_name}}</h2>
+                        <h3>{{section.product_section_description}}</h3>
+                        <img style="padding-left: 10px;width: 530px; height: 330px;" src="{{ section.product_section_image.url }}" alt="{{ section.product_section_name }} Image"></a>
+                    </div>
+                {% endfor %}
+            </section>
+    </div> 
+
+{% endblock %}

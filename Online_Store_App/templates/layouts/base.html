@@ -1,0 +1,109 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+        <title>Online Store</title>
+    </head>
+
+    <body class="body_container">
+
+        <nav class="main_navigation_bar">
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'sections' %}">Store</a></li>
+                <li><a href="{% url 'help' %}">Help</a></li>
+                <li><a href="{% url 'shoping' %}">|<img id="shoping_car_icon" src="{% static 'images/shoping_car_icon.png' %}" alt="shoping_car_icon">|</a></li>
+                <li>|<img id="login_icon" src="{% static 'images/login_icon.png' %}" alt="login_icon">|</li>
+            </ul>
+        </nav>
+
+        <div class="sesion_acordion">
+            <a id="login_sesion" href="{% url 'login' %}"><span>Login sesion</span></a>
+            <a id="register_account" href="{% url 'register' %}"><span>Create account</span></a>
+            <a id="close_sesion" href="{% url 'home' %}"><span>Close sesion</span></a>
+        </div>
+
+
+        <div class="block_content_container">
+            {% block content %}
+                <!--Aqui va el contenido cambiante.-->
+            {% endblock %}
+        </div>
+
+    </body>
+
+
+
+
+    <!--FOOTER-->
+    <footer class="footer_container">
+
+        <!--Services Container-->
+        <div class="services_container">
+
+            <ul>
+                <!--our service-->
+                <div>
+                    <p>
+                        THIS IS OUR QUALITY SERVICE <br>
+                        -New Products <br>
+                        -100% Secure Shipping <br>
+                        -Quality Service and Excellent Customer Care <br>
+                        -Superior Quality at the Best Price <br>
+                        -Secure Purchase <br>
+                        -Direct Manufacturer Warranty
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        DELIVERY SERVICE <br><br>
+                        We offer our self delivery service, but you can choose the<br>
+                        one of your preference. With our service, your product<br>
+                        will arrive at your home within 1-3 business days. <br><br>
+                        <img src="{% static 'images/estafeta_logo.png' %}" alt="estafeta_logo.png">
+                        <img src="{% static 'images/dhl_logo.png' %}" alt="dhl_logo.png">
+                        <img src="{% static 'images/fedex_logo.png' %}" alt="fedex_logo.png">
+                        <img src="{% static 'images/castores_logo.png' %}" alt="castores_logo.png">
+                        <img src="{% static 'images/paquetexpress_logo.png' %}" alt="paquetexpress_logo.png">
+                    </p>
+                </div>
+
+                <!--about-->
+                <div>
+                    <p>
+                        UNDERGROUND-DEV <br> <br>
+                        We are an online store that want to complacement our<br>
+                        customers offering new technology products of all types.<br>
+                        Upgrade your set-up, with amazing prices and all you<br>
+                        need, we offer it, with the experience for 10 years.<br>
+                    </p>
+                </div>
+                            
+            </ul>
+
+        </div>
+
+
+        <ul class="social_icons">
+            <li><img src="{% static 'images/facebook_logo.png' %}" alt="facebook_logo"></li>
+            <li><img src="{% static 'images/instagram_logo.png' %}" alt="instagram_logo"></li>
+            <li><img src="{% static 'images/twitter_logo.png' %}" alt="twitter_logo"></li>
+            <li><img src="{% static 'images/linkedin_logo.png' %}" alt="linkedin_logo"></li>
+            <li><img src="{% static 'images/youtube_logo.png' %}" alt="youtube_logo"></li>
+        </ul>
+
+        <div>
+            2023 Copyright - All rights reserved
+        </div>
+        <div>
+            UndergroundDev - Underground_Dev@udev.org
+        </div>
+    </footer>
+
+    
+</html>

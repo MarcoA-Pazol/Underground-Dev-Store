@@ -1,0 +1,70 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+
+    <!--Home info-->
+    <div class="home_info">
+        <div>
+            <h1>Welcome to<p>Underground-Dev</p></h1>
+        </div>
+
+        <!--Why shoud you buy in Underground-Dev?-->
+        <section class="image_info">
+            <img src="{% static 'images/money_pig.png' %}" alt="Money pig">
+            <img src="{% static 'images/laptop.png' %}" alt="Money pig">
+            <img src="{% static 'images/components.png' %}" alt="Money pig">
+
+            <ul>
+                <li>Low prices, save your money</li>
+                <li>Shop from the comfort of your home</li>
+                <li>Find everything you need</li>
+            </ul>    
+        </section>
+    </div>
+    
+
+    <!--Some of our products-->
+    <div class="our_products">
+        <aside id="products_aside">
+            <p id="products_title">PRODUCTS AND SECTIONS</p>
+        </aside>
+        
+        <div>
+            <h2>
+                <img src="{% static 'images/product_1.jpg' %}" alt="product_1.jpg">
+                <img src="{% static 'images/product_2.jpg' %}" alt="product_2.jpg">
+                <img src="{% static 'images/product_3.jpg' %}" alt="product_3.jpg">
+                <img src="{% static 'images/product_4.jpg' %}" alt="product_4.jpg">
+                <img src="{% static 'images/product_5.jpg' %}" alt="product_5.jpg">
+            </h2>
+            <h2>
+                <img src="{% static 'images/product_6.jpg' %}" alt="product_6.jpg">
+                <img src="{% static 'images/product_7.jpg' %}" alt="product_7.jpg">
+                <img src="{% static 'images/product_8.jpg' %}" alt="product_8.jpg">
+                <img src="{% static 'images/product_9.jpg' %}" alt="product_9.jpg">
+                <img src="{% static 'images/product_10.jpg' %}" alt="product_10.jpg">
+            </h2>
+            <h2>
+                <img src="{% static 'images/product_11.jpg' %}" alt="product_11.jpg">
+                <img src="{% static 'images/product_12.jpg' %}" alt="product_12.jpg">
+                <img src="{% static 'images/product_13.jpg' %}" alt="product_13.jpg">
+                <img src="{% static 'images/product_14.jpg' %}" alt="product_14.jpg">
+                <img src="{% static 'images/product_15.jpg' %}" alt="product_15.jpg">
+            </h2>
+        </div>   
+
+        <aside>
+            <ul>
+                {% for section in sections %}
+                    <a href="{% url 'products' section.id %}"><li>{{section.product_section_name}}</li></a>
+                {% endfor %}
+            </ul>
+        </aside>
+    </div>
+
+{% endblock %}
+        
+    
