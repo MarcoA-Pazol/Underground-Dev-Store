@@ -67,7 +67,7 @@
     background: linear-gradient(rgb(1, 1, 14), rgb(0, 0, 2)); 
     border-inline: 2px solid rgb(186, 191, 240);
     border-bottom: 2px solid rgb(186, 191, 240);
-    display: block;
+    display: none;
 }
 
 .sesion_acordion a span{
@@ -76,6 +76,7 @@
 
 #login_sesion{
     position: fixed;
+    top: 60px;
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     color: rgb(186, 191, 240);
@@ -87,7 +88,7 @@
     color: blue;
 }
 
-#register_account{
+#close_sesion{
     position: fixed;
     top: 60px;
     font-size: 15px;
@@ -96,21 +97,20 @@
     text-align: left;
     padding-left: 5px;
 }
-#register_account:hover{
-    color: green;
+#close_sesion:hover{
+    color: red;
 }
 
-#close_sesion{
+#register_account{
     position: fixed;
-    top: 80px;
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
     color: rgb(186, 191, 240);
     text-align: left;
     padding-left: 5px;
 }
-#close_sesion:hover{
-    color: red;
+#register_account:hover{
+    color: green;
 }
 
 

@@ -2,6 +2,26 @@
 
 {% block content %}
     {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/register.css' %}">
+
+    <div class="register_container">
+        <h1>SIGN-IN WITH YOUR ACCOUNT</h1>
+        
+        <div class="register">
+            <form class="register_formulary" method="POST">
+                {% csrf_token %}
+                {{register_form}}
+                <h1 id="register_button">
+                    REGISTER
+                </h1>
+                <a href="{% url 'login' %}"><h1 id="i_have_an_account">
+                    I HAVE AN ACCOUNT
+                </h1></a>
+            </form>
+        </div>
+    </div>
+
+
 
 
 {% endblock %}

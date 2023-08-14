@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+        <script src="{% static 'scripts/main.js' %}"></script>  
         <title>Online Store</title>
     </head>
 
@@ -20,11 +21,16 @@
                 <li>|<img id="login_icon" src="{% static 'images/login_icon.png' %}" alt="login_icon">|</li>
             </ul>
         </nav>
-
+        
         <div class="sesion_acordion">
-            <a id="login_sesion" href="{% url 'login' %}"><span>Login sesion</span></a>
             <a id="register_account" href="{% url 'register' %}"><span>Create account</span></a>
-            <a id="close_sesion" href="{% url 'home' %}"><span>Close sesion</span></a>
+            {% if request.user.is_authenticated %}
+                <a id="close_sesion" href="{% url 'logout' %}"><span>Close sesion</span></a>
+            {% else %}
+                <a id="login_sesion" href="{% url 'login' %}"><span>Login sesion</span></a>
+            {% endif %}
+            <a id="register_account" href="{% url 'register' %}"><span>Create account</span></a>
+            
         </div>
 
 

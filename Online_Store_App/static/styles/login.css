@@ -1,4 +1,4 @@
-.login_content{
+.login_container{
     background-color: black;
     width: 600px;
     height: 240px;
@@ -8,7 +8,7 @@
     top: 30px;
 }
 
-.login_content h1{
+.login_container h1{
     color: white;
     text-align: center;
     text-shadow: 0 0 2px blue;
@@ -17,27 +17,80 @@
 }
 
 .login{
-    background-color: rgb(28, 116, 28);
+    background-color: rgb(2, 2, 20);
     color: white;
-    width: 300px;
+    width: 600px;
     height: 200px;
     position: relative;
     top: 2px;
 }
 
-.register{  
-    background-color: rgb(36, 36, 110);
-    color: white;
-    width: 300px;
-    height: 200px;
+.login_formulary{
     position: relative;
-    left: 300px;
-    bottom: 208px;
+    top: 20px;
+    left: 160px;
+    width: 290px;
+    height: 60px;
 }
 
-.input{
-    background: wheat;
-    padding: 10px;
-    text-align: center;
-    display: block;
+.login_formulary input{
+    position: relative;
+    left: 58px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+    margin-left: 5px;
+    border: 2px solid skyblue;
+}
+
+/*login buttons*/
+.login #login_button{
+    position: relative;
+    top: 10px;
+    font-size: 16px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 232px;
+    color: rgb(0, 0, 0);
+    background-color: skyblue;
+}
+
+.login #forgotten_password{
+    position: relative;
+    top: 55px;
+    left: 180px;
+    font-size: 12px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(186, 191, 240);
+    width: 200px;
+}
+
+.login #i_havent_account{
+    position: relative;
+    top: 55px;
+    left: 170px;
+    font-size: 12px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(186, 191, 240);
+    width: 220px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*Login icons / images*/
+#username_icon{
+    width: 45px;
+    height: 35px;
+    position: relative;
+    left: 160px;
+    bottom: 90px;
+}
+
+#password_icon{
+    width: 45px;
+    height: 35px;
+    position: relative;
+    left: 110px;
+    bottom: 55px;
 }

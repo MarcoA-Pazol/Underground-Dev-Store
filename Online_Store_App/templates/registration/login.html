@@ -1,0 +1,36 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+
+    <div class="login_container">
+        <h1>SIGN-IN WITH YOUR ACCOUNT</h1>
+        
+        <div class="login">
+
+            <form class="login_formulary" action="" method="POST">
+                {% csrf_token %}
+
+                <input type="text" name="username" id="" placeholder="Username">
+                <br>
+                <input type="password" name="password" id="" placeholder="Password">
+                <br>
+                <button id="login_button" type="submit">Login session</button>
+            </form>
+
+            <h1 id="forgotten_password">
+                I forgotten my password
+            </h1>
+            <a href="{% url 'register' %}"><h1 id="i_havent_account">
+                I want to create a new account
+            </h1></a>
+
+            <img id="username_icon" src="{% static 'images/username_icon.png' %}" alt="username_icon.png">
+            <img id="password_icon" src="{% static 'images/password_icon.png' %}" alt="password_icon.png">
+
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -14,8 +14,4 @@ class CreateNewUser(forms.Form):
     user_email = forms.EmailField(label="E-mail: ", max_length=200)
     user_password = forms.CharField(label="Password: ", max_length=20)
 
-class LoginUser(forms.Form):
-    user_name = forms.CharField(label="Username: ", max_length=200)
-    user_password = forms.CharField(label="Password: ", max_length=20)
-
 
