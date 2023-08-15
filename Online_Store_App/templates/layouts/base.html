@@ -18,7 +18,7 @@
                 <li><a href="{% url 'sections' %}">Store</a></li>
                 <li><a href="{% url 'help' %}">Help</a></li>
                 <li><a href="{% url 'shoping' %}">|<img id="shoping_car_icon" src="{% static 'images/shoping_car_icon.png' %}" alt="shoping_car_icon">|</a></li>
-                <li>|<img id="login_icon" src="{% static 'images/login_icon.png' %}" alt="login_icon">|</li>
+                <li>|<img id="login_icon" src="{% static 'images/login_icon.png' %}" alt="login_icon">{{ user.username }}|</li>
             </ul>
         </nav>
         

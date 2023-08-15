@@ -8,10 +8,4 @@ class CreateNewProduct(forms.Form):
     product_cuantity = forms.FloatField(label="Product cuantity:")
 
 
-#CREATE NEW USER FORMULARY
-class CreateNewUser(forms.Form):
-    user_name = forms.CharField(label="Username: ", max_length=200)
-    user_email = forms.EmailField(label="E-mail: ", max_length=200)
-    user_password = forms.CharField(label="Password: ", max_length=20)
-
 
